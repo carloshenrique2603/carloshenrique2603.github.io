@@ -6,6 +6,11 @@ let playing = false;
 
 btn.addEventListener("click", () => {
   if (!playing) {
+    if (!radio.src) {
+      alert("Coloque o link da rádio depois 😉");
+      return;
+    }
+
     radio.play();
     btn.textContent = "⏸";
   } else {
@@ -15,20 +20,14 @@ btn.addEventListener("click", () => {
   playing = !playing;
 });
 
+// simulação de música
+const lista = [
+  "Top Hits 🔥",
+  "Mix Jovem FM 🎧",
+  "Ao vivo agora 🎶",
+  "Seu som favorito 🎵"
+];
 
-// 🎵 BUSCAR NOME DA MÚSICA (se tiver API)
-async function atualizarMusica() {
-  try {
-    const res = await fetch("COLE_API_AQUI");
-    const data = await res.json();
-
-    music.textContent =
-      data.now_playing.song.title + " - " +
-      data.now_playing.song.artist;
-
-  } catch {
-    music.textContent = "Ao vivo 🎧";
-  }
-}
-
-setInterval(atualizarMusica, 10000);
+setInterval(() => {
+  music.textContent = lista[Math.floor(Math.random() * lista.length)];
+}, 4000);
