@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: #121212;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #0f2027, #203a43, #121212);
   color: white;
 }
 
@@ -12,39 +12,32 @@ body {
   height: 100vh;
 }
 
+/* CARD PRINCIPAL */
 .player {
-  background: #1e1e1e;
+  background: rgba(30,30,30,0.9);
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 25px;
   width: 320px;
   text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
 
-.cover {
-  width: 100%;
-  height: 200px;
-  background: url('https://images.unsplash.com/photo-1511376777868-611b54f68947') center/cover;
-  border-radius: 15px;
-  margin: 20px 0;
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-button {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: none;
-  font-size: 25px;
-  background: #1db954;
-  color: white;
-  cursor: pointer;
+.logo span {
+  color: #1db954;
 }
 
-button:hover {
-  background: #1ed760;
-}
-
+/* AO VIVO */
 .live {
-  color: red;
+  margin-top: 10px;
+  color: #ff3b3b;
+  font-weight: bold;
   animation: pulse 1s infinite;
 }
 
@@ -52,4 +45,42 @@ button:hover {
   0% {opacity: 1;}
   50% {opacity: 0.3;}
   100% {opacity: 1;}
+}
+
+/* CAPA */
+.cover {
+  width: 100%;
+  height: 200px;
+  margin: 20px 0;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #1db954, #191414);
+  box-shadow: 0 0 20px #1db954;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {box-shadow: 0 0 10px #1db954;}
+  to {box-shadow: 0 0 30px #1db954;}
+}
+
+/* BOTÃO PLAY */
+button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  background: #1db954;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #1ed760;
+}
+
+h2 {
+  font-size: 16px;
 }
