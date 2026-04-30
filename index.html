@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Rádio Jovem FM</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="background:black; color:white; text-align:center;">
+<body>
 
-  <h1>🎧 Rádio Jovem FM</h1>
-  <p>Ao vivo 24 horas</p>
+  <div class="app">
+    
+    <div class="player-card">
+      <h1>🎧 Rádio Jovem FM</h1>
+      <p class="status">Ao vivo 24h</p>
 
-  <audio controls autoplay>
-    <source src="SEU_LINK_DA_RADIO" type="audio/mpeg">
-  </audio>
+      <div class="cover"></div>
 
+      <h2 id="music">Carregando música...</h2>
+
+      <button id="playBtn">▶</button>
+
+      <audio id="radio" src="SEU_STREAM_AQUI"></audio>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
