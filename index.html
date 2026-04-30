@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Rádio Jovem FM</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
@@ -12,16 +11,23 @@
 
   <div class="player">
 
-    <h1>🎧 Rádio Jovem FM</h1>
-    <p class="live">🔴 AO VIVO</p>
+    <!-- LOGO -->
+    <div class="logo">
+      🎧 Rádio <span>Jovem FM</span>
+    </div>
 
+    <div class="live">🔴 AO VIVO</div>
+
+    <!-- CAPA -->
     <div class="cover"></div>
 
-    <h2 id="music">Carregando...</h2>
+    <!-- MUSICA -->
+    <h2 id="music">Sintonize agora 🎶</h2>
 
+    <!-- BOTÃO -->
     <button id="playBtn">▶</button>
 
-    <audio id="radio" src="COLE_SEU_LINK_AQUI"></audio>
+    <audio id="radio"></audio>
 
   </div>
 
