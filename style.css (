@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: #121212;
   color: white;
 }
@@ -12,13 +12,12 @@ body {
   height: 100vh;
 }
 
-.player-card {
+.player {
   background: #1e1e1e;
   padding: 30px;
   border-radius: 20px;
+  width: 320px;
   text-align: center;
-  width: 300px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .cover {
@@ -30,13 +29,13 @@ body {
 }
 
 button {
-  font-size: 30px;
-  border: none;
-  background: #1db954;
-  color: white;
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  background: #1db954;
+  color: white;
   cursor: pointer;
 }
 
@@ -44,7 +43,13 @@ button:hover {
   background: #1ed760;
 }
 
-h2 {
-  font-size: 18px;
-  margin: 10px 0;
+.live {
+  color: red;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {opacity: 1;}
+  50% {opacity: 0.3;}
+  100% {opacity: 1;}
 }
