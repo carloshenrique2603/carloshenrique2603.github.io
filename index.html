@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rádio Jovem FM</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,24 +11,30 @@
 
   <!-- LOGO -->
   <header class="topo">
-    <img src="logo.png" alt="Rádio Jovem FM" class="logo">
+    <img src="logo.png" class="logo">
     <h1>Rádio Jovem FM</h1>
   </header>
 
+  <!-- FRASES -->
+  <section class="frases">
+    <p id="frase">A melhor rádio da cidade 🎶</p>
+  </section>
+
   <!-- LOCUTOR -->
   <section class="locutor">
-    <p>🎙️ LOCUTOR NO AR</p>
+    <p class="ao-vivo">🔴 AO VIVO</p>
     <h2>CARLÃO</h2>
   </section>
 
-  <!-- PLAYER (placeholder) -->
-  <section class="player">
-    <p>🔴 AO VIVO</p>
-    <audio controls>
+  <!-- BOTÃO -->
+  <section class="controle">
+    <button onclick="tocarRadio()" id="botao">▶ OUVIR AGORA</button>
+    <audio id="radio">
       <source src="SEU-LINK-DA-RADIO-AQUI" type="audio/mpeg">
-      Seu navegador não suporta áudio.
     </audio>
   </section>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
