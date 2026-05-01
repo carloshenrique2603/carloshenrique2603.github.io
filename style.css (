@@ -1,55 +1,80 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #000000, #111);
-  color: white;
+  font-family: Arial;
   text-align: center;
+  color: white;
+  background: linear-gradient(-45deg, #000, #111, #1a1a1a, #000);
+  background-size: 400% 400%;
+  animation: fundo 10s infinite;
 }
 
-/* TOPO */
-.topo {
-  padding: 30px 0;
+/* ANIMAÇÃO FUNDO */
+@keyframes fundo {
+  0% {background-position: 0%}
+  50% {background-position: 100%}
+  100% {background-position: 0%}
 }
 
+/* LOGO */
 .logo {
-  width: 180px;
+  width: 160px;
+  margin-top: 20px;
 }
 
-.topo h1 {
-  margin-top: 10px;
-  font-size: 28px;
+h1 {
   color: #ffcc00;
+}
+
+/* FRASES */
+.frases {
+  margin: 20px;
+  font-size: 18px;
+  color: #ccc;
 }
 
 /* LOCUTOR */
 .locutor {
-  margin: 40px auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 400px;
+  margin: 30px auto;
+  padding: 15px;
+  width: 85%;
+  max-width: 350px;
   background: #1a1a1a;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
 }
 
-.locutor p {
-  margin: 0;
-  font-size: 14px;
-  color: #aaa;
+/* AO VIVO PULSANDO */
+.ao-vivo {
+  color: red;
+  font-weight: bold;
+  animation: pulse 1s infinite;
 }
 
+@keyframes pulse {
+  0% {opacity: 1;}
+  50% {opacity: 0.3;}
+  100% {opacity: 1;}
+}
+
+/* NOME */
 .locutor h2 {
-  margin: 10px 0 0;
-  font-size: 32px;
+  font-size: 30px;
   color: #ffcc00;
 }
 
-/* PLAYER */
-.player {
-  margin-top: 40px;
+/* BOTÃO */
+#botao {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-audio {
-  margin-top: 10px;
-  width: 250px;
+#botao:hover {
+  background: #ffaa00;
 }
