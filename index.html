@@ -1,67 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Rádio Jovem FM</title>
+<div style="text-align:center; margin-top:40px;">
 
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+  <h2>🔴 AO VIVO - Rádio Jovem FM</h2>
 
-    .container {
-      margin-top: 100px;
-    }
+  <audio id="player" controls style="width:300px;">
+    <source src="http://uk15freenew.listen2myradio.com:39700/;" type="audio/mpeg">
+  </audio>
 
-    h1 {
-      font-size: 40px;
-    }
+  <br><br>
 
-    .ao-vivo {
-      color: red;
-      font-weight: bold;
-      animation: piscar 1s infinite;
-    }
+  <button onclick="tocar()" style="padding:15px 30px; font-size:18px;">
+    ▶️ OUVIR AGORA
+  </button>
 
-    @keyframes piscar {
-      0% {opacity: 1;}
-      50% {opacity: 0.3;}
-      100% {opacity: 1;}
-    }
-
-    iframe {
-      margin-top: 30px;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-
-<body><div style="text-align:center; margin-top:20px;">
-  <h2>🔴 AO VIVO</h2>
-
-  <a href="http://uk15freenew.listen2myradio.com:39700/listen.pls" target="_blank">
-    ▶️ OUVIR RÁDIO
-  </a>
 </div>
 
-  <div class="container">
-    <h1>📻 Rádio Jovem FM</h1>
-
-    <p class="ao-vivo">🔴 AO VIVO AGORA</p>
-
-    <!-- PLAYER DA RÁDIO -->
-    <iframe 
-      src="http://uk15freenew.listen2myradio.com:39700/" 
-      width="300" 
-      height="120" 
-      frameborder="0">
-    </iframe>
-
-  </div>
-
-</body>
-</html>
+<script>
+function tocar(){
+  document.getElementById('player').play();
+}
+</script>
