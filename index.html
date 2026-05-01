@@ -2,46 +2,60 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rádio Jovem FM</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .ao-vivo {
+      color: red;
+      font-weight: bold;
+      animation: piscar 1s infinite;
+    }
+
+    @keyframes piscar {
+      0% {opacity: 1;}
+      50% {opacity: 0.3;}
+      100% {opacity: 1;}
+    }
+
+    iframe {
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- LOGO -->
-  <header class="topo">
-    <img src="logo.png" class="logo">
-    <h1>Rádio Jovem FM</h1>
-  </header>
+  <div class="container">
+    <h1>📻 Rádio Jovem FM</h1>
 
-  <!-- FRASES -->
-  <section class="frases">
-    <p id="frase">A melhor rádio da cidade 🎶</p>
-  </section>
+    <p class="ao-vivo">🔴 AO VIVO AGORA</p>
 
-  <!-- LOCUTOR -->
-  <section class="locutor">
-    <p class="ao-vivo">🔴 AO VIVO</p>
-    <h2>CARLÃO</h2>
-  </section>
-  
-<div style="text-align:center;">
-  <h2>🔴 AO VIVO - Rádio Jovem FM</h2>
+    <!-- PLAYER DA RÁDIO -->
+    <iframe 
+      src="http://uk15freenew.listen2myradio.com:39700/" 
+      width="300" 
+      height="120" 
+      frameborder="0">
+    </iframe>
 
-  <audio controls autoplay>
-    <source src="http://uk15freenew.listen2myradio.com:39700/;" type="audio/mpeg">
-  </audio>
-</div>
-  <!-- BOTÃO -->
-  <section class="controle">
-    <button onclick="tocarRadio()" id="botao">▶ OUVIR AGORA</button>
-    <audio id="radio">
-      <source src="SEU-LINK-DA-RADIO-AQUI" type="audio/mpeg">
-    </audio>
-  </section>
-
-  <script src="script.js"></script>
+  </div>
 
 </body>
 </html>
