@@ -9,53 +9,44 @@
       margin: 0;
       background: #000;
       color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       text-align: center;
     }
 
-    .container {
-      margin-top: 100px;
-    }
-
     h1 {
+      margin-top: 100px;
       font-size: 40px;
     }
 
-    .ao-vivo {
-      color: red;
-      font-weight: bold;
-      animation: piscar 1s infinite;
-    }
-
-    @keyframes piscar {
-      0% {opacity: 1;}
-      50% {opacity: 0.3;}
-      100% {opacity: 1;}
-    }
-
-    iframe {
+    .btn {
+      display: inline-block;
       margin-top: 30px;
+      padding: 20px 40px;
+      font-size: 22px;
+      color: #fff;
+      background: red;
       border-radius: 10px;
+      text-decoration: none;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.1);}
+      100% {transform: scale(1);}
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>📻 Rádio Jovem FM</h1>
+  <h1>📻 Rádio Jovem FM</h1>
 
-    <p class="ao-vivo">🔴 AO VIVO AGORA</p>
+  <p>🔴 AO VIVO AGORA</p>
 
-    <!-- PLAYER DA RÁDIO -->
-    <iframe 
-      src="http://uk15freenew.listen2myradio.com:39700/" 
-      width="300" 
-      height="120" 
-      frameborder="0">
-    </iframe>
-
-  </div>
+  <a class="btn" href="http://uk15freenew.listen2myradio.com:39700/listen.pls" target="_blank">
+    ▶️ OUVIR AGORA
+  </a>
 
 </body>
 </html>
