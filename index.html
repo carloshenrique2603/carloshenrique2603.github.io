@@ -1,6 +1,3 @@
-<div style="text-align: center;">
-  <img src="logo.png" alt="Rádio Jovem FM" width="220">
-</div>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,34 +5,29 @@
   <title>Rádio Jovem FM</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="app">
+  <!-- LOGO -->
+  <header class="topo">
+    <img src="logo.png" alt="Rádio Jovem FM" class="logo">
+    <h1>Rádio Jovem FM</h1>
+  </header>
 
-  <div class="player">
+  <!-- LOCUTOR -->
+  <section class="locutor">
+    <p>🎙️ LOCUTOR NO AR</p>
+    <h2>CARLÃO</h2>
+  </section>
 
-    <!-- LOGO -->
-    <div class="logo">
-      🎧 Rádio <span>Jovem FM</span>
-    </div>
+  <!-- PLAYER (placeholder) -->
+  <section class="player">
+    <p>🔴 AO VIVO</p>
+    <audio controls>
+      <source src="SEU-LINK-DA-RADIO-AQUI" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+  </section>
 
-    <div class="live">🔴 AO VIVO</div>
-
-    <!-- CAPA -->
-    <div class="cover"></div>
-
-    <!-- MUSICA -->
-    <h2 id="music">Sintonize agora 🎶</h2>
-
-    <!-- BOTÃO -->
-    <button id="playBtn">▶</button>
-
-    <audio id="radio"></audio>
-
-  </div>
-
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
