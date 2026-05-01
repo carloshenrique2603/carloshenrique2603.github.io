@@ -1,33 +1,22 @@
-const radio = document.getElementById("radio");
-const btn = document.getElementById("playBtn");
-const music = document.getElementById("music");
+// TOCAR RÁDIO
+function tocarRadio() {
+  var radio = document.getElementById("radio");
+  radio.play();
+}
 
-let playing = false;
-
-btn.addEventListener("click", () => {
-  if (!playing) {
-    if (!radio.src) {
-      alert("Coloque o link da rádio depois 😉");
-      return;
-    }
-
-    radio.play();
-    btn.textContent = "⏸";
-  } else {
-    radio.pause();
-    btn.textContent = "▶";
-  }
-  playing = !playing;
-});
-
-// simulação de música
-const lista = [
-  "Top Hits 🔥",
-  "Mix Jovem FM 🎧",
-  "Ao vivo agora 🎶",
-  "Seu som favorito 🎵"
+// FRASES AUTOMÁTICAS
+var frases = [
+  "A melhor rádio da cidade 🎶",
+  "Só sucesso toca aqui 🔥",
+  "Ligou, curtiu! 📻",
+  "24 horas de música pra você 🎧",
+  "Rádio Jovem FM - Sua vibe!"
 ];
 
-setInterval(() => {
-  music.textContent = lista[Math.floor(Math.random() * lista.length)];
-}, 4000);
+var i = 0;
+
+setInterval(function() {
+  i++;
+  if (i >= frases.length) i = 0;
+  document.getElementById("frase").innerText = frases[i];
+}, 5000);
